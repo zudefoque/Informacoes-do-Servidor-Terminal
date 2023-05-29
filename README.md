@@ -1,6 +1,12 @@
 # informacao-do-sistema
 Teste
 
+### test:
+
+    sudo apt
+
+-----------
+
 
 
       #!/bin/sh
