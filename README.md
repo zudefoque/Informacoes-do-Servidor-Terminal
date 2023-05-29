@@ -89,4 +89,6 @@ Agora toda vez que for feito login o script será executado e atualizará as inf
 
 Exemplo da mensagem em funcionamento:
 
-![image](https://github.com/zudefoque/Informacoes-do-Servidor-Terminal/assets/47385049/9eb99a7f-c883-41b2-b766-fb5ad7d17921)
+![image](https://github.com/zudefoque/Informacoes-do-Servidor-Terminal/assets/47385049/a2c8a413-e91c-48d5-b8e4-ab488b14c07d)
+
+O campo MENSSAGEM="Digite aqui sua mensagem personalizada" no inicio do script muda a mensagem da primeira linha do script.
