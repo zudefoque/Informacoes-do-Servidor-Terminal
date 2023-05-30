@@ -81,7 +81,7 @@ Nesse caso, o script est levantando as informações do sistema e enviando para 
 
 5 - Agora precisamos tornar o script executavel, para isso:
 
-      chmod +x update-motd.d/99-mensagem-personalizada
+      chmod +x 99-mensagem-personalizada
 
 6 - Reinicie a sessão ou faça logout e login novamente para que as alterações tenham efeito.
 
