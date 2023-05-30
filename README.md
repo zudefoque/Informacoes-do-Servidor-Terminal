@@ -11,19 +11,34 @@ Um script para exibir informações do servidor toda vez que efetuar login pelo 
 
 As informações são atualizas automaticamente a cada login no terminal.
 
-
 ## Esse script foi projetado para rodar em sistemas Debian/Ubuntu, não testei em outras distribuições.
 
 
-1 - Acesse o diretorio '/etc/update-motd.d/'
+1 - Antes de mais nada vamos instalar os pacotes necessarios para ter certeza que tudo irá funcionar.
+
+   _Obs.: Lembre-se de executar os como root ou com priviledios de super usuario (sudo)_
+    
+    apt update
+    apt install coreutils procps net-tools
+  
+1.1 - Caso seu sistema seja Ubuntu talvez seja necessario também instalar o pacote **inetutils-syslogd**
+ 
+    apt install inetutils-syslogd
+
+1.2 - Caso seu sistema seja CentOS/RHEL:
+    
+    yum update
+    yum install procps-ng net-tools initscripts yum-utils
+
+2 - Acesse o diretorio '/etc/update-motd.d/'
 
     cd /etc/update-motd.d/
 
-2 - Agora precisamos criar o arquivo onde ficará o conteudo do script, você pode dar o nome que quiser, mas vou utilizar '99-mensagem-personalizada'
+3 - Agora precisamos criar o arquivo onde ficará o conteudo do script, você pode dar o nome que quiser, mas vou utilizar '99-mensagem-personalizada'
 
     nano 99-mensagem-personalizada
 
-3 - Copie o conteudo e cole no arquivo.
+4 - Copie o conteudo e cole no arquivo.
 
     #!/bin/sh
 
@@ -77,13 +92,13 @@ No campo **MENSSAGEM** você pode personalizar a mensagem que será exibida no t
 
 Nesse caso, o script est levantando as informações do sistema e enviando para o arquivo motd que fica localizado dentro de /etc 
 
-4 - Salve o arquivo e saia do editor de texto **Ctrl + O** e **Ctrl + x**
+5 - Salve o arquivo e saia do editor de texto **Ctrl + O** e **Ctrl + x**
 
-5 - Agora precisamos tornar o script executavel, para isso:
+6 - Agora precisamos tornar o script executavel, para isso:
 
     chmod +x 99-mensagem-personalizada
 
-6 - Reinicie a sessão ou faça logout e login novamente para que as alterações tenham efeito.
+7 - Reinicie a sessão ou faça logout e login novamente para que as alterações tenham efeito.
 
 Agora toda vez que for feito login o script será executado e atualizará as informações do arquivo /etc/motd com as informações atualizada.
 
